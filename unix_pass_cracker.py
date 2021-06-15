@@ -1,10 +1,15 @@
+#This is a simple Unix password Cracker, uses Crypt module of python.
+#Takes 2 command line arguments. The hash we want to crack, and the wordlist.
+#USAGE:
+#python3 unix_pass_cracker.py HX9LLTdc/jiDE wordlist.txt
+
 #!/bin/python3
 import crypt
 import sys
 
 try:
-    fileName=sys.argv[2]
-    passHash=sys.argv[1]
+    fileName=sys.argv[2]    #wordlist file
+    passHash=sys.argv[1]    #Hash 4 Crack
 
     salt=passHash[0:2]
     print("Salt: "+salt)
